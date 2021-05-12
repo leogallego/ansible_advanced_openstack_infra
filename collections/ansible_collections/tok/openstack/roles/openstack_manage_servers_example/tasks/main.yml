@@ -4,7 +4,7 @@
     name:             "{{ __openstack_server.instance_name }}"
     state:            "{{ openstack_server_state                    | default(__openstack_server.state) | default('present') }}"
     image:            "{{ __openstack_server.image                  | default('rhel-7.6') }}"
-    flavor:           "{{ __openstack_server.flavor                 | default('m2.medium') }}"
+    flavor:           "{{ __openstack_server.flavor                 | default('m2.tiny') }}"
     key_name:         "{{ __openstack_server.key_name               | default('ansible_ssh_key') }}"
     wait:             "{{ __openstack_server.wait                   | default('yes') }}"
     security_groups:  "{{ __openstack_server.security_group_name }}"
